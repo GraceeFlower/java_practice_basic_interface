@@ -6,5 +6,7 @@ public class ChooseTransportation {
         Train train = new Train();
         Flight flight = new Flight();
 
+        Person person = new Person("小明", 300);
+
     }
 }
