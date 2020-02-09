@@ -7,6 +7,9 @@ public class ChooseTransportation {
         Flight flight = new Flight();
 
         Person person = new Person("小明", 300);
-
+        person.judgeEnough(self);
+        person.judgeEnough(bus);
+        person.judgeEnough(train);
+        person.judgeEnough(flight);
     }
 }
