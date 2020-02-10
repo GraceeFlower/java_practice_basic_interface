@@ -9,7 +9,7 @@ public class Person {
     }
 
     public void judgeEnough(Transportation method) {
-        if (method.getPrice() == money) {
+        if (method.getPrice() <= money) {
             System.out.println(name + "可以选择" + method.getName());
         }
     }

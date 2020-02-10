@@ -1,15 +1,24 @@
+import java.util.ArrayList;
+
 public class ChooseTransportation {
 
     public static void main(String[] args) {
-        SelfDriving self = new SelfDriving();
-        Bus bus = new Bus();
-        Train train = new Train();
-        Flight flight = new Flight();
+        Transportation self = new SelfDriving();
+        Transportation bus = new Bus();
+        Transportation train = new Train();
+        Transportation flight = new Flight();
 
         Person person = new Person("小明", 300);
-        person.judgeEnough(self);
-        person.judgeEnough(bus);
-        person.judgeEnough(train);
-        person.judgeEnough(flight);
+
+        ArrayList<Transportation> methodList = new ArrayList<>();
+        methodList.add(self);
+        methodList.add(bus);
+        methodList.add(train);
+        methodList.add(flight);
+
+        for (Transportation i: methodList) {
+            person.judgeEnough(i);
+        }
+
     }
 }
