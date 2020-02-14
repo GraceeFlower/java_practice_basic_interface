@@ -1,11 +1,15 @@
 public class Person {
 
     private String name;
-    private int money;
+    private int budget;
 
-    public Person(String name, int money) {
+    public Person() {
+
+    }
+
+    public Person(String name, int budget) {
         this.name = name;
-        this.money = money;
+        this.budget = budget;
     }
 
     public String getName() {
@@ -16,16 +20,16 @@ public class Person {
         this.name = name;
     }
 
-    public int getMoney() {
-        return money;
+    public int getBudget() {
+        return budget;
     }
 
-    public void setMoney(int money) {
-        this.money = money;
+    public void setBudget(int budget) {
+        this.budget = budget;
     }
 
-    public void judgeEnough(Transportation method) {
-        if (method.getPrice() <= money) {
+    public void checkBudget(Transportation method) {
+        if (method.getPrice() <= budget) {
             System.out.println(name + "可以选择" + method.getName());
         }
     }

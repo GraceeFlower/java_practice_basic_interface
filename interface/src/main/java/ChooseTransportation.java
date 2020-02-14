@@ -17,7 +17,7 @@ public class ChooseTransportation {
         methodList.add(flight);
 
         for (Transportation i: methodList) {
-            person.judgeEnough(i);
+            person.checkBudget(i);
         }
 
     }
