@@ -16,9 +16,6 @@ public class ChooseTransportation {
         methodList.add(train);
         methodList.add(flight);
 
-        for (Transportation i: methodList) {
-            person.checkBudget(i);
-        }
-
+        methodList.forEach(person::checkBudget);
     }
 }
